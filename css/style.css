@@ -29,6 +29,62 @@ a {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
+.dropdown-menu{
+    background-color: #273a87;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border:none ;
+    cursor: pointer;
+}
+.dropdown-menu a:hover {background-color: #394e75}
+.dropdown-item{
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-item{
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    border-radius:25px ;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 a:hover, a:active, a:focus {
   color: #273a87;
   outline: none;
