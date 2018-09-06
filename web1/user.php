@@ -1,59 +1,88 @@
 <?php 
     class User{
-        private $first_name;
-        private $last_name;
-        private $email;
-        private $password;
-        private $image;
-        private $id;
+     private $nome;
+     private $genero;
+     private $biografia;
+     private $img;
+     private $sexo;
+     private $revelacao;
+     private $recomendar;
+     private $live;
+     private $menu;
         
-        public function getFirstName(){
-            return $this->first_name;
+        public function getNome(){
+            return $this->nome;
         }
         
         
-        public function getLastName(){
-            return $this->last_name;
+        public function getGenero(){
+            return $this->genero;
         }
         
         
-        public function getEmail(){
-            return $this->email;
+        public function getBiografia(){
+            return $this->biografia;
         }
         
         
-        public function getPassword(){
-            return $this->password;
+        public function getSexo(){
+            return $this->sexo;
         }
         
         
-        public function getImage(){
-            return $this->image;
+        public function getImg(){
+            return $this->img;
         }
         
-        public function getId(){
-            return $this->id;
+        public function getRevelacao(){
+            return $this->revelacao;
         }
         
-        
-        
-        public function setFirstName($a){
-             $this->first_name = $a;
+        public function getRecomendar(){
+            return $this-> recomendar;
         }
         
-        public function setLastName($a){
-             $this->last_name = $a;
+        public function getLive(){
+            return $this->live;
+        }
+      
+        public function getMenu(){
+            return $this->menu;
+        }
+      
+      
+      
+      
+      
+        public function setNome($a){
+             $this->nome = $a;
         }
         
-        public function setEmail($a){
-             $this->email = $a;
-        }
-        public function setPassword($a){
-             $this->password = $a;
+        public function setGenero($a){
+             $this->genero = $a;
         }
         
-        public function setImage($a){
-             $this->image = $a;
+        public function setBiografia($a){
+             $this->biografia = $a;
+        }
+        public function setSexo($a){
+             $this->sexo = $a;
+        }
+        
+        public function setImg($a){
+             $this->img = $a;
+        }
+        public function setRevelacao($a){
+             $this->revelacao = $a;
+        }
+        public function setRecomendar($a){
+             $this->recomendar = $a;
+        }
+        public function setLive($a){
+             $this->live = $a;
+        }
+        public function setMenu($a){
+             $this->menu = $a;
         }
     }
 

@@ -1,10 +1,11 @@
 <?php 
 
 
-
+$hostname = 'localhost';
 $username = 'root';
 $password = '';
-$connection = new PDO( 'mysql:host=localhost;dbname=empresa', $username, $password );
+$database = 'artistas';
+$connection = mysqli_connect($hostname,$username,$password,$database);
 
 
 ?>

@@ -6,18 +6,22 @@ class ModelUser{
     public function adicionar(User $user){
         include 'bd.php';
             
-        $query = "INSERT INTO users (first_name, last_name,email, password, image) 
-              VALUES (:first_name, :last_name, :email, :password, :image)";
+        $query = "INSERT INTO artistas (nome, genero, biografia, sexo, img, revelacao, menu, recomendar, live) 
+              VALUES (:nome, :genero, :biografia, :sexo, :img, :revelacao, :menu, :recomendar, :live)";
 
         $statement = $connection->prepare($query);
 
         $valores = array();
-        $valores[':first_name'] = $user->getFirstName();
-        $valores[':last_name'] = $user->getLastName();
-        $valores[':email'] = $user->getEmail();
-        $valores[':password'] = $user->getPassword();
-        $valores[':image'] = $user->getImage();
-
+        $valores[':nome'] = $user->getNome();
+        $valores[':genero'] = $user->getGenero();
+        $valores[':biografia'] = $user->getBioagrafia();
+        $valores[':sexo'] = $user->getSexo();
+        $valores[':img'] = $user->getImg();
+        $valores[':revelacao'] = $user->getRevelacao();
+        $valores[':menu'] = $user->getMenu();
+        $valores[':recomendar'] = $user->getRecomendar();
+        $valores[':live'] = $user->getLive();
+      
         $result = $statement->execute($valores);
 
         if(  empty($result) ){
@@ -39,7 +43,7 @@ class ModelUser{
       include 'bd.php';
       //criei uma query
       
-      $query = "SELECT id, first_name, last_name, email, image FROM users order by id DESC LIMIT 20";
+      $query = "SELECT nome, genero, biografia, sexo, img, revelacao, menu, recomendar, live FROM artistas ";
       //prepara a query
       $statement = $connection->prepare($query);
       //executar o comando
