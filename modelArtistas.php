@@ -14,15 +14,15 @@ class ModelArtistas
         $statement= $connection->prepare($query);
         
         $valores = array();
-        $valores[':nome'] = $user->getNome();
-        $valores[':genero'] = $user->getGenero();
-        $valores[':biografia'] = $user->getBiografia();
-        $valores[':img'] = $user->getImg();
-        $valores[':sexo'] = $user->getSexo();
-        $valores[':revelacao'] = $user->getRevelacao();
-        $valores[':menu'] = $user->getMenu();
-        $valores[':live'] = $user->getLive();
-        $valores[':recomendar'] = $user->getRecomendar();
+        $valores[':nome'] = $artistas->getNome();
+        $valores[':genero'] = $artistas->getGenero();
+        $valores[':biografia'] = $artistas->getBiografia();
+        $valores[':img'] = $artistas->getImg();
+        $valores[':sexo'] = $artistas->getSexo();
+        $valores[':revelacao'] = $artistas->getRevelacao();
+        $valores[':menu'] = $artistas->getMenu();
+        $valores[':live'] = $artistas->getLive();
+        $valores[':recomendar'] = $artistas->getRecomendar();
 
         
         $result = $statement->execute($valores);
@@ -66,15 +66,15 @@ class ModelArtistas
         $statement= $connection->prepare($query);
         
         $valores = array();
-        $valores[':nome'] = $user->getNome();
-        $valores[':genero'] = $user->getGenero();
+        $valores[':nome'] = $artistas->getNome();
+        $valores[':genero'] = $artistas->getGenero();
         $valores[':biografia'] = $user->getBiografia();
-        $valores[':img'] = $user->getImg();
-        $valores[':sexo'] = $user->getSexo();
-        $valores[':revelacao'] = $user->getRevelacao();
-        $valores[':menu'] = $user->getMenu();
-        $valores[':live'] = $user->getLive();
-        $valores[':recomendar'] = $user->getRecomendar();
+        $valores[':img'] = $artistas->getImg();
+        $valores[':sexo'] = $artistas->getSexo();
+        $valores[':revelacao'] = $artistas->getRevelacao();
+        $valores[':menu'] = $artistas->getMenu();
+        $valores[':live'] = $artistas->getLive();
+        $valores[':recomendar'] = $artistas->getRecomendar();
         
         $result = $statement->execute($valores);
         
