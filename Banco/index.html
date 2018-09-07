@@ -1,0 +1,79 @@
+<?php 
+    include 'controllerArtistas.php';
+?>				
+<!DOCTYPE html>
+<html> 
+	<head>
+            <meta charset="UTF-8">
+    
+        <link href="css/bootstrap.min.css" rel="stylesheet" >
+        
+        
+        <link href="css/meuestilo.css" rel="stylesheet">
+    </head>
+	<body>
+	   <div class="container-fluid">
+        <form method="POST" action ="index.php">
+          
+            
+    
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" class="form-control" id="nome" name="nome" aria-describedby="nomeHelp" placeholder="Digite o nome do artista">
+            <small id="nomeHelp" class="form-text text-muted">Preencha apenas com o nome.</small>
+          </div>
+            
+    
+        <div class="form-group">
+            <label for="genero">Gênero:</label>
+            <input type="text" class="form-control" id="genero" name="genero" aria-describedby="generoHelp" placeholder="Digite o gênero das músicas do artista">
+            <small id="generoHelp" class="form-text text-muted">Preencha apenas com o gênero.</small>
+          </div>
+            
+           
+        <div class="form-group">
+            <label for="biografia">Biografia</label>
+            <input type="text" class="form-control" id="biografia" name="biografia" aria-describedby="bioHelp" placeholder="Digite a biografia">
+            <small id="bioHelp" class="form-text text-muted">Preencha com a biografia.</small>
+          </div>
+            
+         
+          <div class="form-group">
+            <label for="sexo">Sexo</label>
+            <input type="text" class="form-control" id="sexo" name="sexo" aria-describedby="sexoHelp" placeholder="Digite sexo do artista">
+            <small id="sexoHelp" class="form-text text-muted">Se for mulher: sexo=true; se for homem=false</small>
+          </div> 
+            
+          <div class="form-group">
+            <label for="revelacao">Revelacão</label>
+            <input type="text" class="form-control" id="revelacao" name="revelacao" aria-describedby="revHelp" placeholder="Caso o artista seja revelação">
+            <small id="revHelp" class="form-text text-muted">Preencha com true ou false.</small>
+          </div>     
+            
+            <div class="form-group">
+            <label for=""></label>
+            <input type="text" class="form-control" id="" name="" aria-describedby="Help" placeholder="">
+            <small id="bioHelp" class="form-text text-muted">Preencha com .</small>
+          </div>     
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+            
+          <button type="submit" class="btn btn-danger" name="cadastrar" >Cadastrar</button>
+        </form>
+        
+           
+        </div>
+	</body>    
+</html>
