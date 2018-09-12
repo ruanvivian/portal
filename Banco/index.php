@@ -37,37 +37,31 @@
             <small id="bioHelp" class="form-text text-muted">Preencha com a biografia.</small>
           </div>
             
-         
-          <div class="form-group">
-            <label for="sexo">Sexo</label>
-            <input type="text" class="form-control" id="sexo" name="sexo" aria-describedby="sexoHelp" placeholder="Digite sexo do artista">
-            <small id="sexoHelp" class="form-text text-muted">Se for mulher: sexo=true; se for homem=false</small>
-          </div> 
             
           <div class="form-group">
-            <label for="revelacao">Revelacão</label>
-            <input type="text" class="form-control" id="revelacao" name="revelacao" aria-describedby="revHelp" placeholder="Caso o artista seja revelação">
-            <small id="revHelp" class="form-text text-muted">Preencha com true ou false.</small>
-          </div>     
-            
-            <div class="form-group">
-            <label for=""></label>
-            <input type="text" class="form-control" id="" name="" aria-describedby="Help" placeholder="">
-            <small id="bioHelp" class="form-text text-muted">Preencha com .</small>
-          </div>     
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            <label for="sexo">Sexo: </label>
+              <select class="custom-select" name="sexo" id="inputGroupSelect02">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+              </select>
+          </div>
+          
           <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            <input type='hidden' value='off' name='revelacao'>
+            <input type="checkbox" class="form-check-input" id="revelacao"  name="revelacao">
+            <label class="form-check-label" for="revelacao"> Dê "check" se o artista for revelação</label>
+          </div>
+            
+           <div class="form-group form-check">
+            <input type='hidden' value='off' name='live'>
+            <input type="checkbox" class="form-check-input" id="live" name="live">
+            <label class="form-check-label" for="live">Dê "check" se o artista for recomendação de ao vivo</label>
+          </div> 
+  
+          <div class="form-group form-check">
+            <input type='hidden' value='off' name='menu'>
+            <input type="checkbox" class="form-check-input" id="menu"  name="menu">
+            <label class="form-check-label" for="menu">Dê "check" se o artista fizer parte do menu</label>
           </div>
             
           <button type="submit" class="btn btn-danger" name="cadastrar" >Cadastrar</button>

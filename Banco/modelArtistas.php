@@ -8,8 +8,8 @@ class ModelArtistas
         include 'bd.php';
         
         
-        $query = "INSERT INTO artistas(nome, genero, biografia, img, sexo, revelacao, menu, live, recomendar) 
-            VALUES (:nome, :genero, :biografia, :img, :sexo, :revelacao, :menu, :live, :recomendar)";
+        $query = "INSERT INTO artistas(nome, genero, biografia, img, sexo, menu, live, revelacao) 
+            VALUES (:nome, :genero, :biografia, :img, :sexo, :menu, :live, :revelacao)";
         
         $statement= $connection->prepare($query);
         
@@ -22,7 +22,6 @@ class ModelArtistas
         $valores[':revelacao'] = $artistas->getRevelacao();
         $valores[':menu'] = $artistas->getMenu();
         $valores[':live'] = $artistas->getLive();
-        $valores[':recomendar'] = $artistas->getRecomendar();
 
         
         $result = $statement->execute($valores);
@@ -37,7 +36,7 @@ class ModelArtistas
     public function listar(){
         include 'bd.php';
         
-        $query = "SELECT nome, genero, biografia, img, sexo, revelacao, menu, live, recomendar FROM artistas";
+        $query = "SELECT nome, genero, biografia, img, sexo, revelacao, menu, live FROM artistas";
         
         $statement = $connection->prepare($query);
         
@@ -61,7 +60,7 @@ class ModelArtistas
         include 'bd.php';
         
         
-        $query = "UPDATE artistas SET nome = :nome, genero = :genero, biografia = :biografia, img = :img, sexo = :sexo, revelacao = :revelacao, menu = :menu, live = :live, recomendar WHERE nome = :nome";
+        $query = "UPDATE artistas SET nome = :nome, genero = :genero, biografia = :biografia, img = :img, sexo = :sexo, revelacao = :revelacao, menu = :menu, live = :live WHERE nome = :nome";
         
         $statement= $connection->prepare($query);
         
@@ -74,7 +73,6 @@ class ModelArtistas
         $valores[':revelacao'] = $artistas->getRevelacao();
         $valores[':menu'] = $artistas->getMenu();
         $valores[':live'] = $artistas->getLive();
-        $valores[':recomendar'] = $artistas->getRecomendar();
         
         $result = $statement->execute($valores);
         

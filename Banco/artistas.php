@@ -6,7 +6,6 @@
      private $img;
      private $sexo;
      private $revelacao;
-     private $recomendar;
      private $live;
      private $menu;
         
@@ -36,10 +35,6 @@
         
         public function getRevelacao(){
             return $this->revelacao;
-        }
-        
-        public function getRecomendar(){
-            return $this-> recomendar;
         }
         
         public function getLive(){
@@ -74,9 +69,6 @@
         }
         public function setRevelacao($a){
              $this->revelacao = $a;
-        }
-        public function setRecomendar($a){
-             $this->recomendar = $a;
         }
         public function setLive($a){
              $this->live = $a;
