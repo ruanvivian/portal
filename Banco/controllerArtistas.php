@@ -3,6 +3,7 @@
 
 var_dump($_POST);
 
+    $modelo = new ModelArtistas();
 if ( isset($_POST['cadastrar'])){
     $artistas = new Artistas();
     
@@ -16,7 +17,7 @@ if ( isset($_POST['cadastrar'])){
     $artistas->setImg("2.jpg");
     
 
-    $modelo = new ModelArtistas();
     $modelo->adicionar($artistas);
 }
+    $lista_artistas= $modelo->listar;
 ?>
